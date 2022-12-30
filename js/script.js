@@ -5,7 +5,7 @@ $(document).ready(function () {
     function productCall(data, sectionName, serialNumber, purpose) {
         var template = `<div class="product_${purpose} col-2 p-1 bg-body-tertiary" draggable="true">
     <div class="box_image">
-        <img class="img-fluid" src="/image/${data.photo}" alt="" draggable='false'>
+        <img class="img-fluid" src="./image/${data.photo}" alt="" draggable='false'>
     </div>
     <span class="text_title fs-5">${data.title}</span>
     <p class="text_brand text-secondary">${data.brand}</p>
