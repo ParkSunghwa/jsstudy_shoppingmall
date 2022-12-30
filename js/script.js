@@ -15,7 +15,7 @@ $(document).ready(function () {
         $(`.${sectionName}`).append(template);
     }
 
-    $.get("/json/store.json").done(function (data) {
+    $.get("./json/store.json").done(function (data) {
         // console.log(data);
         data.products.forEach(function (a, i) {
             productCall(a, 'section_product', i, 'get');
@@ -28,7 +28,7 @@ $(document).ready(function () {
     $('.form_search').on('submit', function (e) {
         $('.section_product').html('');
         var searchWord = $('.input_search').val();
-        $.get('/json/store.json').done(function (data) {
+        $.get('./json/store.json').done(function (data) {
             data.products.forEach(function (a, t) {
                 if (a.title.includes(searchWord)) {
                     productCall(a, 'section_product', a.id, 'get');
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
         var productId = e.target.dataset.id;
         // console.log(productId);
-        $.get("/json/store.json").done(function (data) {
+        $.get("./json/store.json").done(function (data) {
             $('.text_draginfo').css('display', 'none');
             $('.section_drag').css('height', 'auto');
             $('.section_drag').removeClass('align-items-center');
@@ -82,7 +82,7 @@ $(document).ready(function () {
     $(document).on('click', '.button_delete', function (e) {
 
         $(this).parent().detach();
-        $.get("/json/store.json").done(function (data) {
+        $.get("./json/store.json").done(function (data) {
             totalPrice = totalPrice - data.products[e.target.dataset.id].price;
             $('.text_totalprice').html(`${totalPrice}원`);
         });
@@ -126,7 +126,7 @@ $(document).ready(function () {
         },
         'drop': function (e) {
             e.preventDefault();
-            $.get("/json/store.json").done(function (data) {
+            $.get("./json/store.json").done(function (data) {
                 $('.text_draginfo').css('display', 'none');
                 $('.section_drag').css('height', 'auto');
                 $('.section_drag').removeClass('align-items-center');
@@ -150,7 +150,7 @@ $(document).ready(function () {
 
     $(document).on('dragend', '.product_delete', function (e) {
         $(this).detach();
-        $.get("/json/store.json").done(function (data) {
+        $.get("./json/store.json").done(function (data) {
             totalPrice = totalPrice - data.products[$(e.target).children('button').data('id')].price;
             $('.text_totalprice').html(`${totalPrice}원`);
         });
