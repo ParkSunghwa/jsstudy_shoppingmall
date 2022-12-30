@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- my css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="wrap_entire">
+        <nav data-bs-theme="dark" class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">집 꾸미기</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        <a class="nav-link" href="/list.html">구현한 기능 목록</a>
+                        <a class="nav-link" href="#">임시</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container-fluid wrap bg-body-secondary py-2">
+            <div class="section_input container-md">
+                <form class="form_search d-flex align-items-start">
+                    <div class="col-2 me-2">
+                        <input type="text" class="input_search form-control" id="input_search" aria-describedby="input_help">
+                        <div id="input_help" class="text_input form-text text-nowrap">검색하고 싶은 상품의 이름을 입력하세요.</div>
+                    </div>
+                    <button type="submit" class="button_search btn btn-secondary">검색하기</button>
+                </form>
+            </div>
+            <div class="wrap container-fluid mt-2">
+                <div class="section_product container-md bg-body d-flex justify-content-between p-1">
+
+                </div>
+            </div>
+            <div class="wrap container-fluid mt-4">
+                <div class="section_drag container-md bg-dark d-flex justify-content-center align-items-center overflow-scroll">
+                    <button class="button_deleteall btn btn-secondary align-self-end me-2 d-none">Delete All</button>
+                    <p class="text_draginfo text-light">원하시는 상품의 담기 버튼을 누르거나 여기로 드래그 해주세요.</p>
+                </div>
+            </div>
+            <div class="wrap container-fluid mt-4 mb-4">
+                <div class="section_buy container-md bg-body pb-2">
+                    <span class="col-1 lh-lg">최종 가격 : </span>
+                    <span class="text_totalprice lh-lg">0원</span><br>
+                    <button type="submit" class=" button_buy btn btn-secondary mt-2">구매하기</button>
+                </div>
+            </div>
+    </div>
+
+    
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- jquery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+    <!-- my js -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
