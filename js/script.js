@@ -152,7 +152,9 @@ $(document).ready(function () {
     });
     // 삭제
     $(document).on('dragend', '.product_delete', function (e) {
+
         $(this).detach();
+        
         $.get("./json/store.json").done(function (data) {
             totalPrice = totalPrice - data.products[$(e.target).children('button').data('id')].price;
             $('.text_totalprice').html(`${totalPrice}원`);
